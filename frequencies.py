@@ -1,8 +1,12 @@
 """Frequencies function."""
 """ENTER YOUR SOLUTION HERE!"""
-from collections import Counter
+
 
 def frequencies(items):
     string_items = [str(element) for element in items]
-    frequencies = Counter(string_items)
+    frequencies = {}
+    for i in range(0,len(string_items)):
+        count = string_items.count(string_items[i])
+        frequencies[string_items[i]] = count
     return frequencies
+
